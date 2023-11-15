@@ -1,0 +1,33 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+</head>
+<body>
+  <div class="login">
+    <p>Classificador de Cafeína</p>
+    <form action="{{ url_for('predict')}}" method="post" >
+      <input type="text" name="volume" placeholder="Volume (ml)" required="required" />
+      <input type="text" name="calories" placeholder="Calorias" required="required" />
+      <input type="text" name="caffeine" placeholder="Cafeína (mg)" required="required" />
+      <!-- Adicione mais campos conforme necessário -->
+      <select name="type" required="required">
+        <option value="1">Tipo 1</option>
+        <option value="2">Tipo 2</option>
+        <!-- Adicione mais opções conforme necessário -->
+      </select>
+      <button type="submit" class="btn btn-primary btn-block btn-large">Classificar Cafeína</button>
+    </form>
+    
+    <br>
+    <br>
+    {{ prediction_text }}
+  </div>
+  <footer class="footer">Desenvolvido por Alex Souza & Emerson Renaki</footer>
+</body>
+</html>

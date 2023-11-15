@@ -1,0 +1,83 @@
+/* style.css */
+body {
+  background-image: url('/static/backgroud.jpg'); /* Certifique-se de ajustar o caminho conforme a estrutura do seu projeto */
+  background-size: cover;
+  margin: 0; /* Adicionei esta linha para remover a margem padrão do body que poderia interferir na exibição da imagem de fundo */
+}
+
+.login {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  margin: auto;
+}
+
+.login p {
+  font-family: 'Pacifico', cursive;
+  font-size: 24px;
+  text-align: center;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login input,
+.login select,
+.login button {
+  margin-bottom: 10px;
+}
+
+.submit-button {
+  font-size: 1.6rem;
+  width: 50%;
+  border: none;
+  color: hsla(192, 100%, 88%, 0.806);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(102, 224, 255, 0.2) 27%,
+    rgba(102, 224, 255, 0.2) 63%,
+    transparent 100%
+  );
+  clip-path: polygon(0 0, 85% 0%, 100% 0, 100% 15%, 100% 90%, 91% 100%, 0 100%);
+  padding: 0.5em;
+  animation: blinkShadowsFilter 0.5s ease-in infinite;
+  transition: all 500ms;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 18px;
+  color: white;
+  height: 50px; /* ou outro valor desejado */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  opacity: 0.6;
+}
+
+footer p {
+  margin: 0;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  font-family: sans-serif;
+  font-size: 24px;
+  color: white;
+  height: footer-height; /* Adicionei essa propriedade com um valor apropriado para a altura do rodapé */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  opacity: 0.6;
+}
