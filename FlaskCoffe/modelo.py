@@ -13,13 +13,10 @@ y = cafeina_data['type']
 
 X_treino, X_teste, y_treino, y_teste = train_test_split(X, y, test_size=0.3)
 
-# Certifique-se de fornecer os nomes das características ao treinar o modelo
 clf = DecisionTreeClassifier()
-clf = clf.fit(X_treino, y_treino, feature_names=X.columns)
+clf = clf.fit(X_treino, y_treino)
 
 preditos = clf.predict(X_teste)
 print("Acuracia:", accuracy_score(y_teste, preditos))
 
-# Salve o modelo treinado
-with open('caffeine_model.pkl', 'wb') as model_file:
-    pickle.dump(clf, model_file)
+pickle.dump(clf, open('caffeine_model.pkl', 'wb'))
